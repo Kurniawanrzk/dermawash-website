@@ -1,0 +1,127 @@
+:root {
+  --green-color:#537343;
+  --green-light:#D5E6CC;
+  --hero-section-color:#B8C0B8;
+  --white:white;
+}
+
+@font-face {
+  font-family: 'peinaudmed';
+  src: url('./assets/peinaudmed.ttf') format('truetype');
+  /* You can include additional font formats like WOFF or WOFF2 for better browser support */
+}
+
+
+body, * {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  height: fit-content;
+  font-family:sans-serif;
+
+
+}
+
+.hero-section {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:600px;
+  background-position: center;
+}
+
+.bg-hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+nav {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+nav > a{
+  text-decoration: none;
+  font-family: 'peinaudmed';
+
+}
+.nav-item  {
+  display: flex;
+  gap: 20px;
+}
+.nav-item > a {
+  text-decoration: none;
+}
+.nav-item > a > li {
+  list-style-type: none;
+  font-weight: bolder;
+  color: var(--green-color);
+}
+
+.title-hero > h1 {
+  font-family: 'peinaudmed';
+  font-size: 65px;
+}
+
+.title-hero > h2 {
+  max-width: 40%;
+  color: white;
+  font-weight: lighter;
+  font-size: 30px;
+}
+
+.title-hero {
+  margin-left: 100px; 
+  margin-top: 100px
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .title-hero > h1 {
+    font-family: 'peinaudmed';
+    font-size: 55px;
+  }
+  .title-hero {
+    margin-left: 30px; 
+    margin-top: 100px
+  }
+  .title-hero > h2 {
+    max-width: 100%;
+    color: white;
+    font-weight: lighter;
+    font-size: 30px;
+  }
+
+  nav {
+    padding-top: 20px;
+    display: grid;
+    gap: 10px;
+    align-items: center;
+  }
+  
+.bg-hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center   ;
+}
+  
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
