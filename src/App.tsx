@@ -66,7 +66,10 @@ const App: React.FC<AppProps> = ({ duration = 1000 }) => {
           <animated.h2 style={{ ...slideIn(1070)}}>
             Inovasi Sabun Cair Berbasis VCO dengan Ekstrak Daun Sirih Sebagai Alternatif Pengobatan Akibat Inflamasi Tinea yang Efektif.
           </animated.h2>
-
+        <animated.div className="button-hero-section" style={{...slideIn(1070), display:"flex", gap:"20px"}}>
+          <a href="" className='learn-more' style={{textDecoration:"none"}}>Learn More</a>
+          <a href="" className='buy-now' style={{textDecoration:"none"}}>Buy Now</a>
+        </animated.div>
         </div>
       </div>
     </div>

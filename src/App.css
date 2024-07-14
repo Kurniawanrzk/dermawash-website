@@ -51,6 +51,23 @@ body, * {
   background-position: center;
 }
 
+
+.button-hero-section {
+  margin-top: 20px;
+  font-family: 'futura';
+}
+.learn-more, .buy-now {
+  background-color: var(--green-color);
+  color: white;
+  border: 2px solid var(--green-color);
+  padding: 10px;
+  transition: ease-in-out 100ms;
+}
+
+.learn-more:hover,.buy-now:hover  {
+  background: none;
+  color: var(--green-color);
+}
 nav {
   padding-top: 15px;
   display: flex;
