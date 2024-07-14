@@ -12,6 +12,15 @@
 }
 
 
+@font-face {
+  font-family: 'futura';
+  src: url('./assets/futura.ttf') format('truetype');
+  /* You can include additional font formats like WOFF or WOFF2 for better browser support */
+}
+#nav {
+  background-color: white;
+}
+
 body, * {
   margin: 0;
   padding: 0;
@@ -43,7 +52,7 @@ body, * {
 }
 
 nav {
-  padding-top: 20px;
+  padding-top: 15px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -55,9 +64,13 @@ nav > a{
   font-family: 'peinaudmed';
 
 }
+
+.logo > center > img {
+  width: 350px;
+}
 .nav-item  {
   display: flex;
-  gap: 20px;
+  gap: 40px;
 }
 .nav-item > a {
   text-decoration: none;
@@ -65,19 +78,24 @@ nav > a{
 .nav-item > a > li {
   list-style-type: none;
   font-weight: bolder;
+  font-family: 'futura';
+
   color: var(--green-color);
 }
 
 .title-hero > h1 {
   font-family: 'peinaudmed';
   font-size: 65px;
+  letter-spacing: 5px;
 }
 
 .title-hero > h2 {
-  max-width: 40%;
-  color: white;
+  font-family: 'futura';
+  max-width: 50%;
+  margin-top: 20px;
+  color: rgb(0, 0, 0);
   font-weight: lighter;
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .title-hero {
@@ -86,6 +104,9 @@ nav > a{
 }
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  .logo > center > img {
+    width: 300px;
+  }
   .title-hero > h1 {
     font-family: 'peinaudmed';
     font-size: 55px;

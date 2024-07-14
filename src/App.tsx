@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSpring, animated, SpringValues, useTransition } from '@react-spring/web';
-import dermaWashLogo from './assets/img/dermawash logo.png';
+import dermaWashLogo from './assets/img/logo-header.png';
 import bgHeroSection1 from './assets/img/hero-section.png';
 import bgHeroSection2 from './assets/img/hero-section.jpg';
 
@@ -47,7 +47,7 @@ const App: React.FC<AppProps> = ({ duration = 1000 }) => {
            <a href="/">
            <div className='logo' >
             <center>
-            <img src={dermaWashLogo} alt="derma wash logo" width={50} />
+            <img src={dermaWashLogo} alt="derma wash logo"  />
             </center>
               {/* <p style={{color:"#7A7438"}}>DERMAWASH</p> */}
             </div>
@@ -62,10 +62,11 @@ const App: React.FC<AppProps> = ({ duration = 1000 }) => {
         </div>
 
         <div className='title-hero'>
-          <animated.h1 style={{ ...slideIn(1000),  color: "#537343", fontWeight: "bold" }}>DERMAWASH</animated.h1>
+          <animated.h1 style={{ ...slideIn(1000),  color: "black", fontWeight: "bold" }}>DERMAWASH</animated.h1>
           <animated.h2 style={{ ...slideIn(1070)}}>
             Inovasi Sabun Cair Berbasis VCO dengan Ekstrak Daun Sirih Sebagai Alternatif Pengobatan Akibat Inflamasi Tinea yang Efektif.
           </animated.h2>
+
         </div>
       </div>
     </div>
