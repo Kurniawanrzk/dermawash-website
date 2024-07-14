@@ -62,6 +62,7 @@ body, * {
   border: 2px solid var(--green-color);
   padding: 10px;
   transition: ease-in-out 100ms;
+  border-radius: 4px;
 }
 
 .learn-more:hover,.buy-now:hover  {
