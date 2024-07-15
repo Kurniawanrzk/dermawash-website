@@ -109,10 +109,10 @@ const App: React.FC<AppProps> = ({ duration = 1000 }) => {
               </div>
             </a>
             <div className='nav-item'>
-              <a href="#hero-section"><li style={{ borderBottom: "solid #537343 3px" }}>Home</li></a>
-              <a href=""><li>About</li></a>
+              <a href="#hero-section"><li>Home</li></a>
+              <a href="#about-section"><li>About</li></a>
+              <a href="#product-list"><li>Shop</li></a>
               <a href=""><li>Contact</li></a>
-              <a href=""><li>Shop</li></a>
             </div>
           </nav>
         </div>
@@ -225,6 +225,7 @@ const App: React.FC<AppProps> = ({ duration = 1000 }) => {
       className="product-list-section" id="product-list-section">
         <div>
           <div 
+          id="product-list"
           className='product-list'
           style={{
             display:"flex",
