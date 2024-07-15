@@ -194,15 +194,15 @@ function useSlideInAnimation(duration: number): SpringValues<{ opacity: number; 
   });
 }
 
-function useSlideInFromTopAnimation(duration: number): SpringValues<{ opacity: number; transform: string }> {
-  return useSpring({
-    from: { opacity: 0, transform: 'translateY(-50px)' },
-    to: { opacity: 1, transform: 'translateY(0)' },
-    config: {
-      duration,
-      easing: (t: number) => (t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t)
-    }
-  });
-}
+// function useSlideInFromTopAnimation(duration: number): SpringValues<{ opacity: number; transform: string }> {
+//   return useSpring({
+//     from: { opacity: 0, transform: 'translateY(-50px)' },
+//     to: { opacity: 1, transform: 'translateY(0)' },
+//     config: {
+//       duration,
+//       easing: (t: number) => (t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t)
+//     }
+//   });
+// }
 
 export default App;
