@@ -1,11 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { useSpring, animated, SpringValues, useTransition } from '@react-spring/web';
+import { useInView } from 'react-intersection-observer';
 import dermaWashLogo from './assets/img/logo-header.png';
 import bgHeroSection1 from './assets/img/hero-section.png';
 import bgHeroSection2 from './assets/img/hero-section.jpg';
 import citrusProduct from './assets/img/green.png';
 import lavenderProduct from './assets/img/purple.png';
 import sakuraProduct from './assets/img/pink.png';
+import firstAdvantage from './assets/img/47.png'
+import secondAdvantage from './assets/img/48.png'
+import thirdAdvantage from './assets/img/49.png'
+import fourthAdvantage from './assets/img/50.png'
+import fifthAdvantage from './assets/img/51.png'
 
 interface AppProps {
   duration?: number;
@@ -69,6 +75,7 @@ const App: React.FC<AppProps> = ({ duration = 1000 }) => {
   }, [productAbout.length]);
 
   const slideIn = (duration: number) => useSlideInAnimation(duration);
+  const slideInFromTop = (duration: number) => useSlideInFromTopAnimation(duration);
 
   return (
     <div className='container'>
@@ -90,7 +97,6 @@ const App: React.FC<AppProps> = ({ duration = 1000 }) => {
                 <center>
                   <img src={dermaWashLogo} alt="derma wash logo" />
                 </center>
-                {/* <p style={{color:"#7A7438"}}>DERMAWASH</p> */}
               </div>
             </a>
             <div className='nav-item'>
@@ -129,8 +135,25 @@ const App: React.FC<AppProps> = ({ duration = 1000 }) => {
                 </animated.div>
               ))}
               <br />
-              <p style={{marginTop:"55px"}}>DERMAWASH merupakan liquid bodywash menggunakan 100% bahan alami. Yang mengandung 43-52% <b>asam laurat</b>, <b>Vitamin E</b>, <b>Minyak Atsiri</b> dan <b>Sikloogenase</b> yang menjadi kandungan aktif dalam mencegah, merawat serta mendukung penyembuhan inflamasi Tinea Corporis (Kurap).</p>
+              <p style={{marginTop:"55px"}}><span id='dermawash-span-about'>DERMAWASH</span> merupakan liquid bodywash menggunakan 100% bahan alami. Yang mengandung 43-52% <b>asam laurat</b>, <b>Vitamin E</b>, <b>Minyak Atsiri</b> dan <b>Sikloogenase</b> yang menjadi kandungan aktif dalam mencegah, merawat serta mendukung penyembuhan inflamasi Tinea Corporis (Kurap).</p>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="advantage-section" className="advantage-section">
+        <div className='advantage' style={{paddingTop:"100px",paddingBottom:"100px"}}>
+          <center className='title-advantage'>
+          <p><b><span id='dermawash-span-about'>DERMAWASH</span> Excellence</b></p>
+          </center>
+          <div style={{display:"flex", justifyContent:"center",gap:"100px", marginTop:"50px"}}>
+            <AnimatedCardAdv imgSrc={firstAdvantage} text="Alcohol and SLS free Efektif" />
+            <AnimatedCardAdv imgSrc={secondAdvantage} text="Antibacterial formula" />
+            <AnimatedCardAdv imgSrc={fifthAdvantage} text="Melembabkan kulit serta menenangkan kulit" />
+          </div>
+          <div style={{display:"flex", justifyContent:"center",gap:"100px",marginTop:"40px"}}>
+            <AnimatedCardAdv imgSrc={fourthAdvantage} text="Anti-irritrant agent, sehingga cocok untuk kulit sensitive" />
+            <AnimatedCardAdv imgSrc={thirdAdvantage} text="Vitamin E untuk melembabkan kulit serta menenangkan kulit" />
           </div>
         </div>
       </div>
@@ -138,10 +161,43 @@ const App: React.FC<AppProps> = ({ duration = 1000 }) => {
   );
 };
 
+const AnimatedCardAdv: React.FC<{ imgSrc: string, text: string }> = ({ imgSrc, text }) => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const animationProps = useSpring({
+    opacity: inView ? 1 : 0,
+    transform: inView ? 'translateY(0)' : 'translateY(-50px)',
+    config: { duration: 700 },
+  });
+
+  return (
+    <animated.div ref={ref} className='card-adv' style={{ ...animationProps, backgroundColor: "white", padding: "10px", color: "#537343", fontWeight: "bold", letterSpacing: "2px" }}>
+      <center>
+        <img src={imgSrc} width={120} alt="kelebihan" />
+      </center>
+      <p style={{width:"240px",textAlign:"center"}}>{text}</p>
+    </animated.div>
+  );
+}
+
 function useSlideInAnimation(duration: number): SpringValues<{ opacity: number; transform: string }> {
   return useSpring({
     from: { opacity: 0, transform: 'translateX(-100%)' },
     to: { opacity: 1, transform: 'translateX(0%)' },
+    config: {
+      duration,
+      easing: (t: number) => (t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t)
+    }
+  });
+}
+
+function useSlideInFromTopAnimation(duration: number): SpringValues<{ opacity: number; transform: string }> {
+  return useSpring({
+    from: { opacity: 0, transform: 'translateY(-50px)' },
+    to: { opacity: 1, transform: 'translateY(0)' },
     config: {
       duration,
       easing: (t: number) => (t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t)

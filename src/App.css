@@ -151,9 +151,33 @@ nav > a{
   letter-spacing:2px;
 }
 
+#dermawash-span-about {
+  font-family: 'peinaudmed';
+  letter-spacing: 3px;
+}
 .text-description > p {
   font-size: 25px;
   margin-top: 30px;
+}
+
+.advantage-section {
+  background-color: #D0D8D0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.card-adv {
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  border-radius: 15px;
+}
+ p {
+  font-family: 'futura';
+
+ }
+.title-advantage {
+ font-size: 45px;
 }
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
