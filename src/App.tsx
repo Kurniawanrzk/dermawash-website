@@ -75,7 +75,7 @@ const App: React.FC<AppProps> = ({ duration = 1000 }) => {
   }, [productAbout.length]);
 
   const slideIn = (duration: number) => useSlideInAnimation(duration);
-  const slideInFromTop = (duration: number) => useSlideInFromTopAnimation(duration);
+  // const slideInFromTop = (duration: number) => useSlideInFromTopAnimation(duration);
 
   return (
     <div className='container'>
