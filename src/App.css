@@ -168,6 +168,7 @@ nav > a{
   border-radius: 20px;
   width: fit-content;
   height: 329px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
  }
 
  .product-card > figure  {
@@ -217,7 +218,8 @@ nav > a{
 }
 
 .title-about {
-  font-size: 30px;
+  margin-bottom: 20px;
+  font-size: 40px;
 }
 .text-description > p {
   font-size: 26px;
@@ -415,12 +417,80 @@ font-size: 30px;
  transform:translateX(-30px) translateY(-120px) rotate(-10deg);
 }
 
+.desc-down {
+  font-size: 24px;
+}
 
+.footer {
+  margin-top: 200px;
+  background-color: var(--green-light);
+}
+.contact-us {
+  display: grid;
+  align-items: center; 
+
+}
+.content-footer {
+  display: flex;
+  padding: 50px;
+  justify-content: center;
+  gap: 100px;
+}
+
+.social-media {
+  padding-right: 10px;
+}
+
+.header-footer {
+  color: white;
+  background-color: #537343;
+  width: fit-content;
+  padding: 20px;
+  font-size: 45px;
+  position: absolute;
+  font-family: 'futura';
+  font-weight:lighter;
+  border-radius: 25px;
+  transform: translateY(-45px);
+}
+
+.footer-logo  > img{
+  width: 60px;
+}
+.footer-logo  {
+  display: flex;
+  gap: 20px;
+} 
+.footer-logo  > p{
+  display: grid;
+  align-items: center;
+  font-family: 'peinaudmed';
+  display: flex;
+  letter-spacing: 3px;
+  font-size: 30px;
+} 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  
+  .header-footer {
+    color: white;
+    background-color: #537343;
+    width: fit-content;
+    padding: 20px;
+    font-size: 30px;
+    position: absolute;
+    font-family: 'futura';
+    font-weight:lighter;
+    border-radius: 25px;
+    transform: translateY(-45px);
+  }
+  .content-footer {
+    display: grid;
+    padding: 50px;
+    justify-content: center;
+    gap: 60px;
+  }
 .title-about {
-  font-size: 30px;
+  font-size: 40px;
 }
   .right-product-testi1 {
     transform:translateX(90px) translateY(-130px) rotate(10deg);
@@ -530,6 +600,7 @@ font-size: 30px;
 .text-description {
   width: 300px;
   font-family: 'futura';
+  white-space: nowarp;
 }
 .text-description > .titleAboutContainer {
   height: 40px;
@@ -554,6 +625,18 @@ font-size: 30px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center   ;
+}
+
+.contact-us {
+  display: grid;
+  align-items: center; 
+gap: 2px;
+}
+.contact-us > p {
+  font-size: 20px;
+}
+.contact-us > p> a {
+  font-size: 15px;
 }
   
 }

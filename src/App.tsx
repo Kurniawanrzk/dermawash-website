@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { useSpring, animated, SpringValues, useTransition } from '@react-spring/web';
+import { useSpring, animated, SpringValues, useTransition, to } from '@react-spring/web';
 import dermaWashLogo from './assets/img/logo-header.png';
+import dermaWash from './assets/img/dermawash.png';
 import bgHeroSection1 from './assets/img/hero-section.png';
 import bgHeroSection2 from './assets/img/hero-section.jpg';
 import citrusProduct from './assets/img/green.png';
+import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
 import lavenderProduct from './assets/img/purple.png';
 import sakuraProduct from './assets/img/pink.png';
 import firstAdvantage from './assets/img/47.png'
@@ -25,32 +27,32 @@ import randomPeople3 from './assets/img/random-people3.png'
 import tokped from './assets/img/tokped.png'
 import shopee from './assets/img/shopee.png'
 import star from './assets/img/star.svg'
+import yt from './assets/img/youtube.svg'
+import ig from './assets/img/instagram.svg'
+import tt from './assets/img/tiktok.svg'
+import sop from './assets/img/shopee.svg'
+import tok from './assets/img/tokped.svg'
+import arrow from './assets/img/arrow.svg'
 
 import AOS from 'aos'
 import 'aos/dist/aos.css';
 interface AppProps {
   duration?: number;
 }
-const App: React.FC<AppProps> = ({ duration = 1000 }) => {
+const App = ({ duration = 1000 }) => {
   useEffect(() => {
-    AOS.init()
-    },[])
+    AOS.init();
+  }, []);
+
   const [index, setIndex] = useState(0);
   const [idxAboutProduct, setIdxAboutProduct] = useState(0);
+  const [showArrow, setShowArrow] = useState(false);
+  
   const backgrounds = [bgHeroSection1, bgHeroSection2];
   const productAbout = [
-    {
-      img:citrusProduct,
-      shadow:'rgba(83, 115, 67, 0.4) 0px 5px, rgba(83, 115, 67, 0.3) 0px 10px, rgba(83, 115, 67, 0.2) 0px 15px, rgba(83, 115, 67, 0.1) 0px 20px, rgba(83, 115, 67, 0.05) 0px 25px'
-    },
-    {
-      img:lavenderProduct,
-      shadow:'rgba(164, 90, 194, 0.4) 0px 5px, rgba(164, 90, 194, 0.3) 0px 10px, rgba(164, 90, 194, 0.2) 0px 15px, rgba(164, 90, 194, 0.1) 0px 20px, rgba(164, 90, 194, 0.05) 0px 25px'
-    },
-    {
-      img:sakuraProduct,
-      shadow:'rgba(204, 164, 168, 0.4) 0px 5px, rgba(204, 164, 168, 0.3) 0px 10px, rgba(204, 164, 168, 0.2) 0px 15px, rgba(204, 164, 168, 0.1) 0px 20px, rgba(204, 164, 168, 0.05) 0px 25px'
-    }
+    { img: citrusProduct, shadow: 'rgba(83, 115, 67, 0.4) 0px 5px, rgba(83, 115, 67, 0.3) 0px 10px, rgba(83, 115, 67, 0.2) 0px 15px, rgba(83, 115, 67, 0.1) 0px 20px, rgba(83, 115, 67, 0.05) 0px 25px' },
+    { img: lavenderProduct, shadow: 'rgba(164, 90, 194, 0.4) 0px 5px, rgba(164, 90, 194, 0.3) 0px 10px, rgba(164, 90, 194, 0.2) 0px 15px, rgba(164, 90, 194, 0.1) 0px 20px, rgba(164, 90, 194, 0.05) 0px 25px' },
+    { img: sakuraProduct, shadow: 'rgba(204, 164, 168, 0.4) 0px 5px, rgba(204, 164, 168, 0.3) 0px 10px, rgba(204, 164, 168, 0.2) 0px 15px, rgba(204, 164, 168, 0.1) 0px 20px, rgba(204, 164, 168, 0.05) 0px 25px' },
   ];
 
   const transitions = useTransition(index, {
@@ -83,10 +85,56 @@ const App: React.FC<AppProps> = ({ duration = 1000 }) => {
     return () => clearInterval(intervalProductAbout);
   }, [productAbout.length]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const heroSection = document.getElementById('hero-section');
+      const aboutSection = document.getElementById('about-section');
+  
+      if (!heroSection || !aboutSection) return;
+  
+      const heroSectionOffset = heroSection.offsetTop;
+      const aboutSectionOffset = aboutSection.offsetTop;
+  
+      if (window.scrollY + window.innerHeight < aboutSectionOffset && window.scrollY + window.innerHeight > heroSectionOffset) {
+        setShowArrow(false);
+      } else {
+        setShowArrow(true);
+      }
+    };
+  
+    window.addEventListener('scroll', handleScroll);
+  
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const slideIn = (duration: number) => useSlideInAnimation(duration);
 
   return (
     <div className='container'>
+         {showArrow && (
+        <div style={{
+          position: "fixed",
+          fontSize: "20px",
+          bottom: "0px",
+          right: "0px",
+          zIndex: "1",
+          padding: "10px"
+        }}>
+          <a href="#nav">
+            <div style={{
+              backgroundColor: "white",
+              boxShadow: " rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset",
+              padding: "5px",
+              width: "30px",
+              justifyContent: "center",
+              display: "flex",
+              borderRadius: "3px"
+            }}>
+              <img src={arrow} width={20} alt="" />
+            </div>
+          </a>
+        </div>
+      )}
       <div id='hero-section' className='hero-section' style={{ position: 'relative' }}>
         {transitions((style, i) => (
           <animated.div
@@ -111,7 +159,7 @@ const App: React.FC<AppProps> = ({ duration = 1000 }) => {
               <a href="#hero-section"><li>Home</li></a>
               <a href="#about-section"><li>About</li></a>
               <a href="#product-list"><li>Shop</li></a>
-              <a href=""><li>Contact</li></a>
+              <a href="#contact-us"><li>Contact</li></a>
             </div>
           </nav>
         </div>
@@ -128,20 +176,20 @@ const App: React.FC<AppProps> = ({ duration = 1000 }) => {
         </div>
       </div>
 
-      <div className='before-about' style={{display:"flex",justifyContent:"center",alignItems:"center",background:`url(${beforeAbout})`,marginTop:"100px", marginBottom:"100px",height:"550px",backgroundSize:"cover"}}>
-        <h1   style={{ color:"#537343"}}>Dermawash</h1>
+      <div className='before-about' style={{ display: "flex", justifyContent: "center", alignItems: "center", background: `url(${beforeAbout})`, marginTop: "100px", marginBottom: "100px", height: "550px", backgroundSize: "cover" }}>
+        <h1 style={{ color: "#537343" }}>Dermawash</h1>
       </div>
-      <div data-aos='fade-down'  data-aos-duration="900"  id='about-section' className='about-section'>
+      <div data-aos='fade-down' data-aos-duration="900" id='about-section' className='about-section'>
         <div className='content-about'>
-          <div className='product-image-container' style={{ position: "relative"}}>
+          <div className='product-image-container' style={{ position: "relative" }}>
             {transitionAboutProducts((style, i) => (
-              <animated.img className="img-about-product" style={{ ...style, position: "absolute",boxShadow:`${productAbout[i].shadow}` }} src={productAbout[i].img} alt="" />
+              <animated.img className="img-about-product" style={{ ...style, position: "absolute", boxShadow: `${productAbout[i].shadow}` }} src={productAbout[i].img} alt="" />
             ))}
           </div>
-          <div className='description-about' style={{backgroundColor:"#D6E6CC", padding:"20px"}}>
+          <div className='description-about' style={{ backgroundColor: "#D6E6CC", padding: "20px" }}>
             <div className='text-description'>
-            <h3 className='title-about'>About Dermawash</h3>
-              <p className="desc-down"><span id='dermawash-span-about'>DERMAWASH</span> merupakan liquid bodywash menggunakan 100% bahan alami. Yang mengandung 43-52% <b>asam laurat</b>, <b>Vitamin E</b>, <b>Minyak Atsiri</b> dan <b>Sikloogenase</b> yang menjadi kandungan aktif dalam mencegah, merawat serta mendukung penyembuhan inflamasi Tinea Corporis (Kurap).</p>
+              <h3 className='title-about'>About Dermawash</h3>
+              <span className="desc-down"><span id='dermawash-span-about'>DERMAWASH</span> merupakan liquid bodywash menggunakan 100% bahan alami. Yang mengkombinasikan kemurnian Virgin Coconut Oil (VCO) dan antibakterial daun sirih yang efektif meredakan inflamasi tinea.</span>
             </div>
           </div>
         </div>
@@ -256,7 +304,7 @@ const App: React.FC<AppProps> = ({ duration = 1000 }) => {
                       <h3 style={{
                       color:"white",
                       fontWeight:"lighter"
-                    }}>Rp. 55.0000</h3>
+                    }}>Rp 55.000</h3>
                      <h3 style={{
                       color:"white",
                       fontWeight:"lighter"
@@ -292,7 +340,7 @@ const App: React.FC<AppProps> = ({ duration = 1000 }) => {
                       <h3 style={{
                       color:"white",
                       fontWeight:"lighter"
-                    }}>Rp. 55.0000</h3>
+                    }}>Rp 55.000</h3>
                      <h3 style={{
                       color:"white",
                       fontWeight:"lighter"
@@ -329,7 +377,7 @@ const App: React.FC<AppProps> = ({ duration = 1000 }) => {
                       <h3 style={{
                       color:"white",
                       fontWeight:"lighter"
-                    }}>Rp. 55.0000</h3>
+                    }}>Rp 55.000</h3>
                      <h3 style={{
                       color:"white",
                       fontWeight:"lighter"
@@ -365,7 +413,7 @@ const App: React.FC<AppProps> = ({ duration = 1000 }) => {
                       <h3 style={{
                       color:"white",
                       fontWeight:"lighter"
-                    }}>Rp. 22.0000</h3>
+                    }}>Rp 22.000</h3>
                      <h3 style={{
                       color:"white",
                       fontWeight:"lighter"
@@ -401,7 +449,7 @@ const App: React.FC<AppProps> = ({ duration = 1000 }) => {
                       <h3 style={{
                       color:"white",
                       fontWeight:"lighter"
-                    }}>Rp. 22.0000</h3>
+                    }}>Rp 22.000</h3>
                      <h3 style={{
                       color:"white",
                       fontWeight:"lighter"
@@ -437,7 +485,7 @@ const App: React.FC<AppProps> = ({ duration = 1000 }) => {
                       <h3 style={{
                       color:"white",
                       fontWeight:"lighter"
-                    }}>Rp. 22.0000</h3>
+                    }}>Rp 22.000</h3>
                      <h3 style={{
                       color:"white",
                       fontWeight:"lighter"
@@ -529,6 +577,7 @@ const App: React.FC<AppProps> = ({ duration = 1000 }) => {
                    <img src={star} width={30} style={{ filter:"invert(74%) sepia(48%) saturate(843%) hue-rotate(360deg) brightness(103%) contrast(113%)"}} alt="" />
                    <img src={star} width={30} style={{ filter:"invert(74%) sepia(48%) saturate(843%) hue-rotate(360deg) brightness(103%) contrast(113%)"}} alt="" />
                    <img src={star} width={30} style={{ filter:"invert(74%) sepia(48%) saturate(843%) hue-rotate(360deg) brightness(103%) contrast(113%)"}} alt="" />
+                    
                     </div>
                     <br />
                     <div className='text'>
@@ -541,6 +590,72 @@ const App: React.FC<AppProps> = ({ duration = 1000 }) => {
             </div>
           </div>
       </div>
+
+      <div className="footer" data-aos='fade-up'  data-aos-duration="900">
+      <div data-aos='zoom-in'  data-aos-duration="900"  style={{
+        display:'flex',
+        justifyContent:"center",
+        marginBottom:"30px"
+      }}>
+      <div  className='header-footer'>
+                    Solusi Atasi Jamur Kulit
+        </div>
+      </div>
+        <div
+        className='content-footer'
+        >
+           
+            <div className='social-media'>
+              <div className='footer-logo'>
+                    <img src={dermaWash}  alt="" />
+                    <p>DERMAWASH</p>
+              </div>
+              <hr style={{border:"1px solid black",marginTop:"5px"}} />
+              <div>
+              <div style={{display:"flex", gap:"10px",marginTop:"10px"}}>
+              <a href="https://www.instagram.com/dermawash_?utm_source=qr&igsh=dm14Z200MTdnMXV5" target="_blank" rel="noopener noreferrer">
+  <span style={{background:"#537343", padding:"2px", borderRadius:"5px", width:"40px", display:"flex", justifyContent:"center"}}>
+    <img style={{filter:"invert(100%) sepia(100%) saturate(0%) hue-rotate(34deg) brightness(102%) contrast(102%)"}} width={30} src={ig} alt="Instagram" />
+  </span>
+</a>
+<a href="https://youtube.com/@dermawash?si=IQqWMPH9VHA1gPsI" target="_blank" rel="noopener noreferrer">
+  <span style={{background:"#537343", padding:"2px", borderRadius:"5px", width:"40px", display:"flex", justifyContent:"center",height:"35px"}}>
+    <img style={{filter:"invert(100%) sepia(100%) saturate(0%) hue-rotate(34deg) brightness(102%) contrast(102%)"}} width={30} src={yt} alt="YouTube" />
+  </span>
+</a>
+<a href="https://www.tiktok.com/@dermawashofficial?_t=8nyq4HdBTyJ&_r=1" target="_blank" rel="noopener noreferrer">
+  <span style={{background:"#537343", padding:"2px", borderRadius:"5px", width:"40px", display:"flex", justifyContent:"center",height:"35px"}}>
+    <img style={{filter:"invert(100%) sepia(100%) saturate(0%) hue-rotate(34deg) brightness(102%) contrast(102%)"}} width={25} src={tt} alt="TikTok" />
+  </span>
+</a>
+<a href="https://tokopedia.link/n1h7HteTbLb" target="_blank" rel="noopener noreferrer">
+  <span style={{background:"#537343", padding:"2px", borderRadius:"5px", width:"40px", display:"flex", justifyContent:"center",height:"35px"}}>
+    <img style={{filter:"invert(100%) sepia(100%) saturate(0%) hue-rotate(34deg) brightness(102%) contrast(102%)"}} width={30} src={tok} alt="Tokopedia" />
+  </span>
+</a>
+<a href="https://id.shp.ee/esTttdB" target="_blank" rel="noopener noreferrer">
+  <span style={{background:"#537343", padding:"2px", borderRadius:"5px", width:"40px", display:"flex", justifyContent:"center",height:"35px"}}>
+    <img style={{filter:"invert(100%) sepia(100%) saturate(0%) hue-rotate(34deg) brightness(102%) contrast(102%)"}} width={30} src={sop} alt="Shoppe" />
+  </span>
+</a>
+
+              </div>
+              </div>
+            </div>
+            <div className='contact-us' id='contact-us'>
+              <p><b>Contact Us In</b></p>
+              <p>Email : <a href="" style={{color:"black"}}>dermawash.pkm.k@gmail.com</a></p>
+              <p>Whatsapp :                <a style={{color:"black"}} href="https://api.whatsapp.com/send/?phone=6281399752449&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
+              +62 813-9975-2449              </a>
+              </p>
+            </div>
+           
+        </div>
+        <div style={{textAlign:"center",padding:"20px",borderTop:"2px solid black"}}>
+          <p>            Copyright 2024 Dermawash PKM Team, Inc - All Right Reserved.
+          </p>
+            </div>
+         </div>
     </div>
   );
 };
