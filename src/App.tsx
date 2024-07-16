@@ -52,7 +52,6 @@ const App: React.FC<AppProps> = ({ duration = 1000 }) => {
       shadow:'rgba(204, 164, 168, 0.4) 0px 5px, rgba(204, 164, 168, 0.3) 0px 10px, rgba(204, 164, 168, 0.2) 0px 15px, rgba(204, 164, 168, 0.1) 0px 20px, rgba(204, 164, 168, 0.05) 0px 25px'
     }
   ];
-  const colorAboutDescription = ['black','black','black'];
 
   const transitions = useTransition(index, {
     from: { opacity: 0 },
@@ -65,13 +64,6 @@ const App: React.FC<AppProps> = ({ duration = 1000 }) => {
     from: { opacity: 0 },
     enter: { opacity: 1 },
     leave: { opacity: 0 },
-    config: { duration },
-  });
-
-  const transitionDescriptionColor = useTransition(idxAboutProduct, {
-    from: { color: colorAboutDescription[(idxAboutProduct + colorAboutDescription.length - 1) % colorAboutDescription.length] },
-    enter: { color: colorAboutDescription[idxAboutProduct] },
-    leave: { color: colorAboutDescription[(idxAboutProduct + 1) % colorAboutDescription.length] },
     config: { duration },
   });
 
