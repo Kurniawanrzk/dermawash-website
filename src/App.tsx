@@ -130,24 +130,24 @@ const App: React.FC<AppProps> = ({ duration = 1000 }) => {
       </div>
 
       <div className='before-about' style={{display:"flex",justifyContent:"center",alignItems:"center",background:`url(${beforeAbout})`,marginTop:"100px", marginBottom:"100px",height:"550px",backgroundSize:"cover"}}>
-        <h1   style={{ color:"#537343", fontSize:"130px"}}>Dermawash</h1>
+        <h1   style={{ color:"#537343"}}>Dermawash</h1>
       </div>
       <div data-aos='zoom-in-down'  data-aos-duration="900" id='about-section' className='about-section'>
         <div className='content-about'>
-          <div className='product-image-container' style={{ position: "relative", width: "400px" }}>
+          <div className='product-image-container' style={{ position: "relative"}}>
             {transitionAboutProducts((style, i) => (
-              <animated.img className="img-about-product" style={{ ...style, position: "absolute",boxShadow:`${productAbout[i].shadow}` }} src={productAbout[i].img} width={400} alt="" />
+              <animated.img className="img-about-product" style={{ ...style, position: "absolute",boxShadow:`${productAbout[i].shadow}` }} src={productAbout[i].img} alt="" />
             ))}
           </div>
-          <div className='description-about' style={{backgroundColor:"#D6E6CC", padding:"35px"}}>
+          <div className='description-about' style={{backgroundColor:"#D6E6CC", padding:"20px"}}>
             <div className='text-description'>
               {transitionDescriptionColor((style, i) => (
                 <animated.div style={{...style, position:"relative"}} key={i}>
-                  <h3 style={{position:"absolute", fontSize:"50px"}}>About Dermawash</h3>
+                  <h3 className='title-about' style={{position:"absolute"}}>About Dermawash</h3>
                 </animated.div>
               ))}
               <br />
-              <p style={{marginTop:"55px"}}><span id='dermawash-span-about'>DERMAWASH</span> merupakan liquid bodywash menggunakan 100% bahan alami. Yang mengandung 43-52% <b>asam laurat</b>, <b>Vitamin E</b>, <b>Minyak Atsiri</b> dan <b>Sikloogenase</b> yang menjadi kandungan aktif dalam mencegah, merawat serta mendukung penyembuhan inflamasi Tinea Corporis (Kurap).</p>
+              <p className="desc-down"><span id='dermawash-span-about'>DERMAWASH</span> merupakan liquid bodywash menggunakan 100% bahan alami. Yang mengandung 43-52% <b>asam laurat</b>, <b>Vitamin E</b>, <b>Minyak Atsiri</b> dan <b>Sikloogenase</b> yang menjadi kandungan aktif dalam mencegah, merawat serta mendukung penyembuhan inflamasi Tinea Corporis (Kurap).</p>
             </div>
           </div>
         </div>
@@ -163,51 +163,48 @@ const App: React.FC<AppProps> = ({ duration = 1000 }) => {
         marginBottom:"70px"
         }}>
         <div
-        style={{display:"flex"}}
         >
               <div 
               className="advantage-item">
                 <div
-                style={{display:"flex",gap:"20px"}}
                 >
                   <figure data-aos='fade-down'  data-aos-duration="900">
                     <center>
-                    <img  src={firstAdvantage} alt="" width={200} />
+                    <img  src={firstAdvantage} alt="" className='img-adv' />
                     <p style={{fontSize:"25px"}}>Alcohol & SLS <br />Free</p>
                     </center>
                   </figure>
                   <figure data-aos='fade-down'  data-aos-duration="900">
                     <center>
-                    <img src={secondAdvantage} alt="" width={200} />
+                    <img src={secondAdvantage} alt="" className='img-adv' />
                     <p style={{fontSize:"25px"}}>Antibacterial <br /> formula</p>
                     </center>
                   </figure>
                   <figure data-aos='fade-down'  data-aos-duration="900"> 
                     <center>
-                    <img src={thirdAdvantage} alt="" width={200} />
+                    <img src={thirdAdvantage} alt="" className='img-adv' />
                     <p style={{fontSize:"25px"}}>Vitamin E</p>
                     </center>
                   </figure>
                 </div>
                 <div
-                style={{display:"flex",gap:"20px", justifyContent:"center"}}
                 >
                     <figure data-aos='fade-down'  data-aos-duration="900">
                     <center>
-                    <img src={fourthAdvantage} alt="" width={200} />
+                    <img src={fourthAdvantage} alt="" className='img-adv' />
                     <p style={{fontSize:"25px"}}>Melembabkan</p>
                     </center>
                   </figure>
                   <figure data-aos='fade-down'  data-aos-duration="900"> 
                     <center>
-                    <img src={fifthAdvantage} alt="" width={200} />
+                    <img src={fifthAdvantage} alt="" className='img-adv' />
                     <p style={{fontSize:"25px"}}>Efektif terhadap <br/>kurap</p>
                     </center>
                   </figure>
                 </div>
               </div>
               <div data-aos='fade-down'  data-aos-duration="900" className="advetage-right">
-                <img src={rightAdvantage} alt="right-image-advantage" width={400} />
+                <img src={rightAdvantage} alt="right-image-advantage"/>
               </div>
         </div>
       </div>
@@ -232,7 +229,6 @@ const App: React.FC<AppProps> = ({ duration = 1000 }) => {
             justifyContent:"space-around",
             overflowX:"scroll",
             gap:"20px",
-            width:"1100px",
             borderRadius:"20px",
             paddingBottom:"10px"
           }}
@@ -254,7 +250,7 @@ const App: React.FC<AppProps> = ({ duration = 1000 }) => {
                 >
                     <div
                     style={{
-                      transform:"translateY(200px)"
+                      transform:"translateY(220px)"
                     }}
                     >
                     <h2 style={{
@@ -290,7 +286,7 @@ const App: React.FC<AppProps> = ({ duration = 1000 }) => {
                 >
                     <div
                     style={{
-                      transform:"translateY(200px)"
+                      transform:"translateY(220px)"
                     }}
                     >
                     <h2 style={{
@@ -327,7 +323,7 @@ const App: React.FC<AppProps> = ({ duration = 1000 }) => {
                 >
                     <div
                     style={{
-                      transform:"translateY(200px)"
+                      transform:"translateY(220px)"
                     }}
                     >
                     <h2 style={{
@@ -363,7 +359,7 @@ const App: React.FC<AppProps> = ({ duration = 1000 }) => {
                 >
                     <div
                     style={{
-                      transform:"translateY(200px)"
+                      transform:"translateY(220px)"
                     }}
                     >
                     <h2 style={{
@@ -399,7 +395,7 @@ const App: React.FC<AppProps> = ({ duration = 1000 }) => {
                 >
                     <div
                     style={{
-                      transform:"translateY(200px)"
+                      transform:"translateY(220px)"
                     }}
                     >
                     <h2 style={{
@@ -435,7 +431,7 @@ const App: React.FC<AppProps> = ({ duration = 1000 }) => {
                 >
                     <div
                     style={{
-                      transform:"translateY(200px)"
+                      transform:"translateY(220px)"
                     }}
                     >
                     <h2 style={{
