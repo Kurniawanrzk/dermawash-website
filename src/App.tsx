@@ -20,6 +20,12 @@ import lavenderLg from './assets/img/dermawash-product/lavender-lg.png'
 import citrusSm from './assets/img/dermawash-product/citrus-sm.png'
 import sakuraSm from './assets/img/dermawash-product/sakura-sm.png'
 import lavenderSm from './assets/img/dermawash-product/lavender-sm.png'
+import citrusLg1 from './assets/img/dermawash-product/citrus-lg 1.png'
+import sakuraLg1 from './assets/img/dermawash-product/sakura-lg 1.png'
+import lavenderLg1 from './assets/img/dermawash-product/lavender-lg 1.png'
+import citrusSm1 from './assets/img/dermawash-product/citrus-sm 1.png'
+import sakuraSm1 from './assets/img/dermawash-product/sakura-sm 1.png'
+import lavenderSm1 from './assets/img/dermawash-product/lavender-sm 1.png'
 import randomPeople1 from './assets/img/random-people1.png'
 import randomPeople2 from './assets/img/random-people2.png'
 import randomPeople3 from './assets/img/random-people3.png'
@@ -122,6 +128,7 @@ const App = ({ duration = 1000 }) => {
               backgroundColor: "white",
               boxShadow: " rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset",
               padding: "5px",
+              marginRight:"20px",
               width: "30px",
               justifyContent: "center",
               display: "flex",
@@ -168,7 +175,7 @@ const App = ({ duration = 1000 }) => {
           </animated.h2>
           <animated.div className="button-hero-section" style={{ ...slideIn(1070), display: "flex", gap: "20px" }}>
             <a href="#about-section" className='learn-more' style={{ textDecoration: "none" }}>Learn More</a>
-            <a href="#" className='buy-now' style={{ textDecoration: "none" }}>Buy Now</a>
+            <a href="#product-list-section" className='buy-now' style={{ textDecoration: "none" }}>Buy Now</a>
           </animated.div>
         </div>
       </div>
@@ -259,7 +266,7 @@ const App = ({ duration = 1000 }) => {
         paddingBottom:"100px"
 
       }}
-      className="product-list-section" id="product-list-section">
+      className="product-list-section" >
         <div>
           <center style={{marginBottom:"30px"}}>
           <h3 style={{fontSize:"40px"}}>Varian Dermawash</h3>
@@ -347,7 +354,8 @@ const App = ({ duration = 1000 }) => {
                 </figcaption>
               </figure>
             </div>
-          
+            <div id="product-list-section"></div>
+
             <div
             style={{
               backgroundColor:"#AE8DBA"
@@ -499,11 +507,11 @@ const App = ({ duration = 1000 }) => {
       <div id='testimonial-section' className="testimonial-section">
           <div className='testimonial-lists'>
             <div  data-aos='zoom-in'  data-aos-duration="900" className='testimonial'>
-              <div className='right-product-testi1' style={{position:"absolute"}}>
-                <img src={citrusLg} width="250" alt="" />
+              <div className='right1-product-testi1' style={{position:"absolute"}}>
+                <img src={citrusLg1} width="70" alt="" />
               </div>
-              <div className='right-product-testi2' style={{position:"absolute"}}>
-                <img src={citrusSm} width="210" alt="" />
+              <div className='right1-product-testi2' style={{position:"absolute"}}>
+                <img src={citrusSm1} width="70" alt="" />
               </div>
                 <div className='pp'>
                   <img src={randomPeople1} alt="" />
@@ -548,20 +556,20 @@ const App = ({ duration = 1000 }) => {
                 <div className='pp' id='pp-desktop'>
                   <img src={randomPeople2}  alt="" />
                 </div>
-                <div className='left-product-testi1'  style={{position:"absolute"}}>
-                <img src={sakuraLg} width="250" alt="" />
+                <div className='left2-product-testi1'  style={{position:"absolute"}}>
+                <img src={sakuraLg1} width="70" alt="" />
               </div>
-              <div className='left-product-testi2'  style={{position:"absolute" }}>
-                <img src={sakuraSm} width="210" alt="" />
+              <div className='left2-product-testi2'  style={{position:"absolute" }}>
+                <img src={sakuraSm1} width="70" alt="" />
               </div>
             </div>
 
             <div  data-aos='zoom-in'  data-aos-duration="900" className='testimonial-2'>
-            <div className='right-product-testi1' style={{position:"absolute"}}>
-                <img src={lavenderLg} width="250" alt="" />
+            <div className='right3-product-testi1' style={{position:"absolute"}}>
+                <img src={lavenderLg1} width="75" alt="" />
               </div>
-              <div className='right-product-testi2' style={{position:"absolute"}}>
-                <img src={lavenderSm} width="210" alt="" />
+              <div className='right3-product-testi2' style={{position:"absolute"}}>
+                <img src={lavenderSm1} width="70" alt="" />
               </div>
                 <div className='pp'>
                   <img src={randomPeople3} alt="" />

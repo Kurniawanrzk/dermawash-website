@@ -369,6 +369,7 @@ gap: 50px;
 }
 
 
+
 .testimonial-2 > .message {
   font-family: 'futura';
   width: 600px;
@@ -404,18 +405,27 @@ font-size: 30px;
 #pp-phone {
   display: none;
 }
-.right-product-testi1 {
-   transform:translateX(630px) translateY(-150px) rotate(10deg);
+.right1-product-testi1 {
+   transform:translateX(705px) translateY(-120px) rotate(10deg);
 }
-.right-product-testi2 { 
-  transform:translateX(705px) translateY(-120px) rotate(10deg);
+.right1-product-testi2 { 
+  transform:translateX(760px) translateY(-120px) rotate(10deg);
 }
-.left-product-testi1 {
-  transform:translateX(1px) translateY(-150px) rotate(-10deg);
+.left2-product-testi1 {
+  transform:translateX(4px) translateY(-150px) rotate(-10deg);
 }
-.left-product-testi2 { 
+.left2-product-testi2 { 
  transform:translateX(-30px) translateY(-120px) rotate(-10deg);
 }
+
+
+.right3-product-testi1 {
+  transform:translateX(715px) translateY(-120px) rotate(10deg);
+}
+
+.right3-product-testi2 { 
+  transform:translateX(760px) translateY(-120px) rotate(10deg);
+ }
 
 .desc-down {
   font-size: 24px;
@@ -492,21 +502,30 @@ font-size: 30px;
 .title-about {
   font-size: 40px;
 }
-  .right-product-testi1 {
-    transform:translateX(90px) translateY(-130px) rotate(10deg);
+  .right1-product-testi1 {
+    transform:translateX(145px) translateY(-110px) rotate(10deg);
   }
 
-  .right-product-testi1 > img, .right-product-testi2 > img, .left-product-testi1 > img, .left-product-testi1 > img {
-    width: 200px;
-  }
- .right-product-testi2 { 
-  transform:translateX(130px) translateY(-120px) rotate(10deg);
+ .right1-product-testi2 { 
+  transform:translateX(200px) translateY(-100px) rotate(10deg);
  }
- .left-product-testi1 {
-  transform:translateX(90px) translateY(-130px) rotate(10deg);
+ .left2-product-testi1 {
+  transform:translateX(159px) translateY(-110px) rotate(10deg);
 }
- .left-product-testi2 { 
-  transform:translateX(130px) translateY(-120px) rotate(10deg);
+ .left2-product-testi2 { 
+  transform:translateX(200px) translateY(-100px) rotate(10deg);
+ }
+
+ .right3-product-testi1 {
+  transform:translateX(150px) translateY(-110px) rotate(10deg);
+}
+
+.right3-product-testi1  > img {
+  width: 80px;
+}
+
+.right3-product-testi2 { 
+  transform:translateX(200px) translateY(-100px) rotate(10deg);
  }
 #pp-desktop {
   display: none;
@@ -535,7 +554,7 @@ font-size: 30px;
 }
 
 .advetage-right > img {
-  width: 400px;
+  width: 340px;
 }
  
   .advantage-section > div {
