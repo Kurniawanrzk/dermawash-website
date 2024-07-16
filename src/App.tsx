@@ -508,10 +508,10 @@ const App = ({ duration = 1000 }) => {
           <div className='testimonial-lists'>
             <div  data-aos='zoom-in'  data-aos-duration="900" className='testimonial'>
               <div className='right1-product-testi1' style={{position:"absolute"}}>
-                <img src={citrusLg1} width="70" alt="" />
+                <img src={citrusLg1} width="70" alt="Jeruk large" />
               </div>
               <div className='right1-product-testi2' style={{position:"absolute"}}>
-                <img src={citrusSm1} width="70" alt="" />
+                <img src={citrusSm1} width="70" alt="Jeruk small" />
               </div>
                 <div className='pp'>
                   <img src={randomPeople1} alt="" />
