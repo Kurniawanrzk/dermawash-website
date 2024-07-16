@@ -110,7 +110,7 @@ nav > a{
 }
 
 .advetage-right > img {
-  width: 400px;
+  width: 500px;
 }
 
 .logo > center > img {
@@ -216,6 +216,9 @@ nav > a{
   margin-top: 30px;
 }
 
+.title-about {
+  font-size: 30px;
+}
 .text-description > p {
   font-size: 26px;
   margin-top:40px;
@@ -324,9 +327,14 @@ gap: 50px;
   height: 180px;
 }
 
+.fa .fa-star {
+  text-rendering: optimizeLegibility;
+
+}
 .testimonial-1 > .message >.star {
   display: flex;
   justify-content: end;
+
 }
 
 .testimonial-1 > .message {
@@ -410,6 +418,10 @@ font-size: 30px;
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  
+.title-about {
+  font-size: 30px;
+}
   .right-product-testi1 {
     transform:translateX(90px) translateY(-130px) rotate(10deg);
   }
@@ -444,7 +456,7 @@ font-size: 30px;
     width: 200px;
   }
   .product-list {
-    width:300px;
+    width:350px;
   
   }
   .product-card > figure > center > img {
@@ -453,7 +465,7 @@ font-size: 30px;
 }
 
 .advetage-right > img {
-  width: 200px;
+  width: 400px;
 }
  
   .advantage-section > div {

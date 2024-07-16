@@ -24,6 +24,7 @@ import randomPeople2 from './assets/img/random-people2.png'
 import randomPeople3 from './assets/img/random-people3.png'
 import tokped from './assets/img/tokped.png'
 import shopee from './assets/img/shopee.png'
+import star from './assets/img/star.svg'
 
 import AOS from 'aos'
 import 'aos/dist/aos.css';
@@ -138,7 +139,7 @@ const App: React.FC<AppProps> = ({ duration = 1000 }) => {
       <div className='before-about' style={{display:"flex",justifyContent:"center",alignItems:"center",background:`url(${beforeAbout})`,marginTop:"100px", marginBottom:"100px",height:"550px",backgroundSize:"cover"}}>
         <h1   style={{ color:"#537343"}}>Dermawash</h1>
       </div>
-      <div data-aos='zoom-in-down'  data-aos-duration="900" id='about-section' className='about-section'>
+      <div data-aos='fade-down'  data-aos-duration="900"  id='about-section' className='about-section'>
         <div className='content-about'>
           <div className='product-image-container' style={{ position: "relative"}}>
             {transitionAboutProducts((style, i) => (
@@ -147,12 +148,7 @@ const App: React.FC<AppProps> = ({ duration = 1000 }) => {
           </div>
           <div className='description-about' style={{backgroundColor:"#D6E6CC", padding:"20px"}}>
             <div className='text-description'>
-              {transitionDescriptionColor((style, i) => (
-                <animated.div style={{...style, position:"relative"}} key={i}>
-                  <h3 className='title-about' style={{position:"absolute"}}>About Dermawash</h3>
-                </animated.div>
-              ))}
-              <br />
+            <h3 className='title-about'>About Dermawash</h3>
               <p className="desc-down"><span id='dermawash-span-about'>DERMAWASH</span> merupakan liquid bodywash menggunakan 100% bahan alami. Yang mengandung 43-52% <b>asam laurat</b>, <b>Vitamin E</b>, <b>Minyak Atsiri</b> dan <b>Sikloogenase</b> yang menjadi kandungan aktif dalam mencegah, merawat serta mendukung penyembuhan inflamasi Tinea Corporis (Kurap).</p>
             </div>
           </div>
@@ -160,6 +156,7 @@ const App: React.FC<AppProps> = ({ duration = 1000 }) => {
       </div>
 
       <div 
+      
       id="advantage-section" 
       className="advantage-section" 
       style={{
@@ -174,19 +171,19 @@ const App: React.FC<AppProps> = ({ duration = 1000 }) => {
               className="advantage-item">
                 <div
                 >
-                  <figure data-aos='fade-down'  data-aos-duration="900">
+                  <figure  data-aos='fade-down'  data-aos-duration="900" >
                     <center>
                     <img  src={firstAdvantage} alt="" className='img-adv' />
                     <p style={{fontSize:"25px"}}>Alcohol & SLS <br />Free</p>
                     </center>
                   </figure>
-                  <figure data-aos='fade-down'  data-aos-duration="900">
+                  <figure  data-aos='fade-down'  data-aos-duration="900" >
                     <center>
                     <img src={secondAdvantage} alt="" className='img-adv' />
                     <p style={{fontSize:"25px"}}>Antibacterial <br /> formula</p>
                     </center>
                   </figure>
-                  <figure data-aos='fade-down'  data-aos-duration="900"> 
+                  <figure  data-aos='fade-down'  data-aos-duration="900" > 
                     <center>
                     <img src={thirdAdvantage} alt="" className='img-adv' />
                     <p style={{fontSize:"25px"}}>Vitamin E</p>
@@ -195,13 +192,13 @@ const App: React.FC<AppProps> = ({ duration = 1000 }) => {
                 </div>
                 <div
                 >
-                    <figure data-aos='fade-down'  data-aos-duration="900">
+                    <figure  data-aos='fade-down'  data-aos-duration="900" >
                     <center>
                     <img src={fourthAdvantage} alt="" className='img-adv' />
                     <p style={{fontSize:"25px"}}>Melembabkan</p>
                     </center>
                   </figure>
-                  <figure data-aos='fade-down'  data-aos-duration="900"> 
+                  <figure  data-aos='fade-down'  data-aos-duration="900" > 
                     <center>
                     <img src={fifthAdvantage} alt="" className='img-adv' />
                     <p style={{fontSize:"25px"}}>Efektif terhadap <br/>kurap</p>
@@ -209,14 +206,14 @@ const App: React.FC<AppProps> = ({ duration = 1000 }) => {
                   </figure>
                 </div>
               </div>
-              <div data-aos='fade-down'  data-aos-duration="900" className="advetage-right">
+              <div  data-aos='fade-down'  data-aos-duration="900"   className="advetage-right">
                 <img src={rightAdvantage} alt="right-image-advantage"/>
               </div>
         </div>
       </div>
 
       <div 
-       data-aos='fade-down'  data-aos-duration="900"
+        data-aos='fade-down'  data-aos-duration="900" 
       style={{
         display:"flex",
         justifyContent:"center",
@@ -227,12 +224,14 @@ const App: React.FC<AppProps> = ({ duration = 1000 }) => {
       }}
       className="product-list-section" id="product-list-section">
         <div>
+          <center style={{marginBottom:"30px"}}>
+          <h3 style={{fontSize:"40px"}}>Varian Dermawash</h3>
+          </center>
           <div 
           id="product-list"
           className='product-list'
           style={{
             display:"flex",
-            justifyContent:"space-around",
             overflowX:"scroll",
             gap:"20px",
             borderRadius:"20px",
@@ -462,7 +461,7 @@ const App: React.FC<AppProps> = ({ duration = 1000 }) => {
 
       <div id='testimonial-section' className="testimonial-section">
           <div className='testimonial-lists'>
-            <div  data-aos='zoom-in'  data-aos-duration="900"className='testimonial'>
+            <div  data-aos='zoom-in'  data-aos-duration="900" className='testimonial'>
               <div className='right-product-testi1' style={{position:"absolute"}}>
                 <img src={citrusLg} width="250" alt="" />
               </div>
@@ -475,11 +474,11 @@ const App: React.FC<AppProps> = ({ duration = 1000 }) => {
 
                 <div className='message'>
                     <div className='star'>
-                    <i className="fa fa-star" aria-hidden="true"></i>
-                    <i className="fa fa-star" aria-hidden="true"></i>
-                    <i className="fa fa-star" aria-hidden="true"></i>
-                    <i className="fa fa-star" aria-hidden="true"></i>
-                    <i className="fa fa-star" aria-hidden="true"></i>
+                   <img src={star} width={30} style={{ filter:"invert(74%) sepia(48%) saturate(843%) hue-rotate(360deg) brightness(103%) contrast(113%)"}} alt="" />
+                   <img src={star} width={30} style={{ filter:"invert(74%) sepia(48%) saturate(843%) hue-rotate(360deg) brightness(103%) contrast(113%)"}} alt="" />
+                   <img src={star} width={30} style={{ filter:"invert(74%) sepia(48%) saturate(843%) hue-rotate(360deg) brightness(103%) contrast(113%)"}} alt="" />
+                   <img src={star} width={30} style={{ filter:"invert(74%) sepia(48%) saturate(843%) hue-rotate(360deg) brightness(103%) contrast(113%)"}} alt="" />
+                   <img src={star} width={30} style={{ filter:"invert(74%) sepia(48%) saturate(843%) hue-rotate(360deg) brightness(103%) contrast(113%)"}} alt="" />
                     </div>
                     <div className='text'>
                     <p>      
@@ -496,11 +495,11 @@ const App: React.FC<AppProps> = ({ duration = 1000 }) => {
                 </div>
                 <div className='message' >
                     <div className='star' style={{display:"flex", gap:"10px",}}>
-                    <i className="fa fa-star"  aria-hidden="true"></i>
-                    <i className="fa fa-star" aria-hidden="true"></i>
-                    <i className="fa fa-star" aria-hidden="true"></i>
-                    <i className="fa fa-star" aria-hidden="true"></i>
-                    <i className="fa fa-star" aria-hidden="true"></i>
+                   <img src={star} width={30} style={{ filter:"invert(74%) sepia(48%) saturate(843%) hue-rotate(360deg) brightness(103%) contrast(113%)"}} alt="" />
+                   <img src={star} width={30} style={{ filter:"invert(74%) sepia(48%) saturate(843%) hue-rotate(360deg) brightness(103%) contrast(113%)"}} alt="" />
+                   <img src={star} width={30} style={{ filter:"invert(74%) sepia(48%) saturate(843%) hue-rotate(360deg) brightness(103%) contrast(113%)"}} alt="" />
+                   <img src={star} width={30} style={{ filter:"invert(74%) sepia(48%) saturate(843%) hue-rotate(360deg) brightness(103%) contrast(113%)"}} alt="" />
+                   <img src={star} width={30} style={{ filter:"invert(74%) sepia(48%) saturate(843%) hue-rotate(360deg) brightness(103%) contrast(113%)"}} alt="" />
                     </div>
                     <div className='text'>
                     <p style={{textAlign:"right"}}>      
@@ -533,11 +532,11 @@ const App: React.FC<AppProps> = ({ duration = 1000 }) => {
 
                 <div className='message'>
                     <div className='star' style={{display:"flex", gap:"10px"}}>
-                    <i className="fa fa-star" aria-hidden="true"></i>
-                    <i className="fa fa-star" aria-hidden="true"></i>
-                    <i className="fa fa-star" aria-hidden="true"></i>
-                    <i className="fa fa-star" aria-hidden="true"></i>
-                    <i className="fa fa-star" aria-hidden="true"></i>
+                   <img src={star} width={30} style={{ filter:"invert(74%) sepia(48%) saturate(843%) hue-rotate(360deg) brightness(103%) contrast(113%)"}} alt="" />
+                   <img src={star} width={30} style={{ filter:"invert(74%) sepia(48%) saturate(843%) hue-rotate(360deg) brightness(103%) contrast(113%)"}} alt="" />
+                   <img src={star} width={30} style={{ filter:"invert(74%) sepia(48%) saturate(843%) hue-rotate(360deg) brightness(103%) contrast(113%)"}} alt="" />
+                   <img src={star} width={30} style={{ filter:"invert(74%) sepia(48%) saturate(843%) hue-rotate(360deg) brightness(103%) contrast(113%)"}} alt="" />
+                   <img src={star} width={30} style={{ filter:"invert(74%) sepia(48%) saturate(843%) hue-rotate(360deg) brightness(103%) contrast(113%)"}} alt="" />
                     </div>
                     <br />
                     <div className='text'>
