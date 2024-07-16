@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useSpring, animated, SpringValues, useTransition, to } from '@react-spring/web';
 import dermaWashLogo from './assets/img/logo-header.png';
 import dermaWash from './assets/img/dermawash.png';
