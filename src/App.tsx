@@ -18,7 +18,13 @@ import sakuraLg from './assets/img/dermawash-product/sakura-lg.png'
 import lavenderLg from './assets/img/dermawash-product/lavender-lg.png'
 import citrusSm from './assets/img/dermawash-product/citrus-sm.png'
 import sakuraSm from './assets/img/dermawash-product/sakura-sm.png'
-import lavenderSm from './assets/img/dermawash-product/sakura-sm.png'
+import lavenderSm from './assets/img/dermawash-product/lavender-sm.png'
+import randomPeople1 from './assets/img/random-people1.png'
+import randomPeople2 from './assets/img/random-people2.png'
+import randomPeople3 from './assets/img/random-people3.png'
+import tokped from './assets/img/tokped.png'
+import shopee from './assets/img/shopee.png'
+
 import AOS from 'aos'
 import 'aos/dist/aos.css';
 interface AppProps {
@@ -314,7 +320,7 @@ const App: React.FC<AppProps> = ({ duration = 1000 }) => {
             >     
               <figure>
                 <center>
-                  <img src={lavenderLg} alt="lavender-large" />
+                  <img src={lavenderLg} style={{transform:"scale(1.2)"}} alt="lavender-large" />
                 </center>
                 <figcaption
                 style={{
@@ -452,6 +458,97 @@ const App: React.FC<AppProps> = ({ duration = 1000 }) => {
             </div>
           </div>
         </div>
+      </div>
+
+      <div id='testimonial-section' className="testimonial-section">
+          <div className='testimonial-lists'>
+            <div  data-aos='zoom-in'  data-aos-duration="900"className='testimonial'>
+              <div className='right-product-testi1' style={{position:"absolute"}}>
+                <img src={citrusLg} width="250" alt="" />
+              </div>
+              <div className='right-product-testi2' style={{position:"absolute"}}>
+                <img src={citrusSm} width="210" alt="" />
+              </div>
+                <div className='pp'>
+                  <img src={randomPeople1} alt="" />
+                </div>
+
+                <div className='message'>
+                    <div className='star'>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <div className='text'>
+                    <p>      
+                      <span><b>Sandra Steffy</b> on Shopee <img src={shopee} width={15} alt="" /></span>
+                      <br /> 
+                      Sabun jeruk ini segar banget! Kulitku jadi lebih lembut dan kurap cepat sembuh. Setelah pakai rutin, gatal-gatal hilang. Aromanya juga bikin semangat di pagi hari. Pokoknya suka banget sama DERMAWASH!                 </p>
+                    </div>
+                </div>
+            </div>
+            <div  data-aos='zoom-in'  data-aos-duration="900" className='testimonial-1'>
+          
+              <div className='pp' id='pp-phone'>
+                  <img src={randomPeople2}  alt="" />
+                </div>
+                <div className='message' >
+                    <div className='star' style={{display:"flex", gap:"10px",}}>
+                    <i className="fa fa-star"  aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <div className='text'>
+                    <p style={{textAlign:"right"}}>      
+                      <span><b>Sarah</b> on Shopee <img src={shopee} width={15} alt="" /></span>
+                      <br />              
+                      Varian sakura ini wangi banget dan bikin kulitku sehat. Kurapku hilang dan kulit jadi bersih. Nggak ada iritasi lagi, cocok buat kulit sensitif. Selain itu, bikin kulit jadi lebih cerah. Bakal pakai terus!             </p>
+                    </div>
+                </div>
+                <div className='pp' id='pp-desktop'>
+                  <img src={randomPeople2}  alt="" />
+                </div>
+                <div className='left-product-testi1'  style={{position:"absolute"}}>
+                <img src={sakuraLg} width="250" alt="" />
+              </div>
+              <div className='left-product-testi2'  style={{position:"absolute" }}>
+                <img src={sakuraSm} width="210" alt="" />
+              </div>
+            </div>
+
+            <div  data-aos='zoom-in'  data-aos-duration="900" className='testimonial-2'>
+            <div className='right-product-testi1' style={{position:"absolute"}}>
+                <img src={lavenderLg} width="250" alt="" />
+              </div>
+              <div className='right-product-testi2' style={{position:"absolute"}}>
+                <img src={lavenderSm} width="210" alt="" />
+              </div>
+                <div className='pp'>
+                  <img src={randomPeople3} alt="" />
+                </div>
+
+                <div className='message'>
+                    <div className='star' style={{display:"flex", gap:"10px"}}>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <br />
+                    <div className='text'>
+                    <p>      
+                      <span><b>Shakila Syfis1</b> on Tokopedia <img src={tokped} width={15} alt="" /></span>
+                      <br />              
+                      Sabun lavendernya enak banget buat rileks sebelum tidur. Kulit jadi lembap dan kurap sembuh cepat. Recommended banget!              </p>
+                    </div>
+                </div>
+            </div>
+          </div>
       </div>
     </div>
   );

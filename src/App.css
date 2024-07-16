@@ -160,7 +160,6 @@ nav > a{
 .content-about {
   display: flex;
   justify-content: center;
-  gap: 20px;
   
 }
 
@@ -178,7 +177,6 @@ nav > a{
  }
 .product-card > figure > center > img {
  width: 250px;
- transform: scale(1.3);
 }
 .img-about-product {
   width: 400px;
@@ -273,8 +271,178 @@ nav > a{
   position: absolute;
   letter-spacing:2px;
 }
+
+
+.description-about {
+  width: fit-content;
+  height: 285px;
+}
+
+.testimonial-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.testimonial-lists {
+display: grid;
+gap: 50px;
+}
+
+.testimonial {
+  display: flex;
+  background-color: var(--green-light);
+  color: rgb(67, 67, 67);
+  padding: 30px;
+  border-radius: 0px 20px 20px 0px;
+  border-left: 6px solid rgb(103, 173, 103);
+  gap: 50px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.testimonial > .message {
+  display: flex;
+  align-items: center;
+  font-family: 'futura';
+  width: 600px;
+}
+
+.testimonial-1 {
+  display: flex;
+  background-color: #DEB1B8;
+  color: rgb(67, 67, 67);
+  padding: 30px;
+  border-radius: 20px 0px 0px 20px;
+  border-right: 6px solid rgb(231, 115, 133);
+  gap: 50px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.testimonial-1 > .pp > img{
+  border-radius: 500px;
+  width: 180px;
+  height: 180px;
+}
+
+.testimonial-1 > .message >.star {
+  display: flex;
+  justify-content: end;
+}
+
+.testimonial-1 > .message {
+  display: grid;
+  justify-content: right;
+  align-items: center;
+  font-family: 'futura';
+  width: 600px;
+}
+.testimonial-1 > .message >.text {
+  font-size: larger;
+}
+
+/* - */
+.testimonial-2 {
+  display: flex;
+  background-color: #AE8DBA;
+  color: rgb(67, 67, 67);
+  padding: 30px;
+  border-radius: 0px 20px 20px 0px;
+  border-left: 6px solid #a462bd;
+  gap: 50px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.testimonial-2 > .pp > img{
+  border-radius: 500px;
+  width: 180px;
+  height: 180px;
+}
+
+
+.testimonial-2 > .message {
+  font-family: 'futura';
+  width: 600px;
+}
+.testimonial-2 > .message >.text {
+  font-size: larger;
+}
+.star {
+color: rgb(255, 174, 0);
+font-size: 30px;
+}
+.testimonial > .pp > img{
+  border-radius: 500px;
+  width: 180px;
+  height: 180px;
+}
+
+.testimonial > .message {
+  display: grid;
+  justify-content: center;
+  font-family: 'futura';
+  width: 600px;
+}
+
+.testimonial > .message > .star {
+  display: flex;
+  justify-content:start;
+}
+.testimonial > .message >.text {
+  font-size: larger;
+}
+
+#pp-phone {
+  display: none;
+}
+.right-product-testi1 {
+   transform:translateX(630px) translateY(-150px) rotate(10deg);
+}
+.right-product-testi2 { 
+  transform:translateX(705px) translateY(-120px) rotate(10deg);
+}
+.left-product-testi1 {
+  transform:translateX(1px) translateY(-150px) rotate(-10deg);
+}
+.left-product-testi2 { 
+ transform:translateX(-30px) translateY(-120px) rotate(-10deg);
+}
+
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  .right-product-testi1 {
+    transform:translateX(90px) translateY(-130px) rotate(10deg);
+  }
+
+  .right-product-testi1 > img, .right-product-testi2 > img, .left-product-testi1 > img, .left-product-testi1 > img {
+    width: 200px;
+  }
+ .right-product-testi2 { 
+  transform:translateX(130px) translateY(-120px) rotate(10deg);
+ }
+ .left-product-testi1 {
+  transform:translateX(90px) translateY(-130px) rotate(10deg);
+}
+ .left-product-testi2 { 
+  transform:translateX(130px) translateY(-120px) rotate(10deg);
+ }
+#pp-desktop {
+  display: none;
+}
+
+#pp-phone {
+  display: block;
+}
+  .testimonial-1, .testimonial-2, .testimonial {
+    display: grid;
+  }
+  .testimonial-1 > .message, .testimonial-2 > .message, .testimonial > .message {
+    display: grid;
+    justify-content: right;
+    align-items: center;
+    font-family: 'futura';
+    width: 200px;
+  }
   .product-list {
     width:300px;
   
@@ -337,7 +505,7 @@ nav > a{
   justify-content: center;
 } 
 .product-image-container {
-  transform: translateX(2px);
+  transform: translateX(-4px);
   width: fit-content;
 
 }
@@ -345,7 +513,7 @@ nav > a{
 .description-about {
   margin-top: 350px;
   width: fit-content;
-  transform: translateX(10px);
+  height: fit-content;
 }
 .text-description {
   width: 300px;
