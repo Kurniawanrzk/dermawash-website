@@ -5,7 +5,6 @@ import dermaWash from './assets/img/dermawash.png';
 import bgHeroSection1 from './assets/img/hero-section.png';
 import bgHeroSection2 from './assets/img/hero-section.jpg';
 import citrusProduct from './assets/img/green.png';
-import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
 import lavenderProduct from './assets/img/purple.png';
 import sakuraProduct from './assets/img/pink.png';
 import firstAdvantage from './assets/img/47.png'
@@ -36,9 +35,7 @@ import arrow from './assets/img/arrow.svg'
 
 import AOS from 'aos'
 import 'aos/dist/aos.css';
-interface AppProps {
-  duration?: number;
-}
+
 const App = ({ duration = 1000 }) => {
   useEffect(() => {
     AOS.init();
