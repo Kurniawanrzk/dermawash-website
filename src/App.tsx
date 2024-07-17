@@ -603,8 +603,7 @@ const App = ({ duration = 1000 }) => {
         marginBottom:"30px"
       }}>
       <div  className='header-footer'>
-                    Solusi Atasi Jamur Kulit
-        </div>
+      Bersama Dermawash Basmi Tinea Tampil Mempesona        </div>
       </div>
         <div
         className='content-footer'
