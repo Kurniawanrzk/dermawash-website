@@ -603,7 +603,7 @@ const App = ({ duration = 1000 }) => {
         marginBottom:"30px"
       }}>
       <div  className='header-footer'>
-      Bersama Dermawash Basmi Tinea Tampil Mempesona        </div>
+      Bersama Dermawash Basmi Tinea Tampil Memesona        </div>
       </div>
         <div
         className='content-footer'
