@@ -364,7 +364,7 @@ const App = ({ duration = 1000 }) => {
             >     
               <figure>
                 <center>
-                  <img src={lavenderLg} style={{transform:"scale(1.2)"}} alt="lavender-large" />
+                  <img src={lavenderLg} style={{transform:"scale(0.9)"}} alt="lavender-large" />
                 </center>
                 <figcaption
                 style={{
@@ -472,7 +472,7 @@ const App = ({ duration = 1000 }) => {
             >     
               <figure>
                 <center>
-                  <img src={lavenderSm} alt="lavender-small" />
+                  <img src={lavenderSm}  alt="lavender-small" />
                 </center>
                 <figcaption
                 style={{
@@ -648,7 +648,7 @@ const App = ({ duration = 1000 }) => {
             </div>
             <div className='contact-us' id='contact-us'>
               <p><b>Contact Us In</b></p>
-              <p>Email : <a href="" style={{color:"black"}}>dermawash.pkm.k@gmail.com</a></p>
+              <p>Email : <a href="mailto:dermawash.pkm.k@gmail.com" style={{color:"black"}}>dermawash.pkm.k@gmail.com</a></p>
               <p>Whatsapp :                <a style={{color:"black"}} href="https://api.whatsapp.com/send/?phone=6281399752449&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
               +62 813-9975-2449              </a>
               </p>
