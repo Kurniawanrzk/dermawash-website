@@ -329,6 +329,26 @@ gap: 50px;
   height: 180px;
 }
 
+.arrow-container {
+  position: fixed;
+  font-size: 20px;
+  bottom: 0px;
+  right: 0px;
+  z-index: 1;
+  padding: 10px;
+}
+
+.arrow {
+  background-color: white;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  padding: 5px;
+  margin-right: 20px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  border-radius: 3px;
+}
+
 .fa .fa-star {
   text-rendering: optimizeLegibility;
 
@@ -428,7 +448,7 @@ font-size: 30px;
  }
 
 .desc-down {
-  font-size: 28px;
+  font-size: 27px;
 }
 
 .footer {
