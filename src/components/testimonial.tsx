@@ -95,7 +95,7 @@ const Testimonial = () => {
                   <br />
                   <div className='text'>
                   <p>      
-                    <span><b>Shakila Syfis1</b> on Tokopedia <img src={tokped} width={15} alt="" /></span>
+                    <span><b>Yolanda</b> on Tokopedia <img src={tokped} width={15} alt="" /></span>
                     <br />              
                     Sabun lavendernya enak banget buat rileks sebelum tidur. Kulit jadi lembap dan kurap sembuh cepat. Recommended banget!              </p>
                   </div>
