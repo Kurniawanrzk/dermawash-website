@@ -31,6 +31,8 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background:rgb(133, 133, 133); 
 }
+
+
 @font-face {
   font-family: 'peinaudmed';
   src: url('./assets/peinaudmed.ttf') format('truetype');
@@ -419,6 +421,21 @@ font-size: 30px;
   justify-content:start;
 }
 .testimonial > .message >.text {
+  font-size: larger;
+}
+
+.testimonial-1 > .message {
+  display: grid;
+  justify-content: center;
+  font-family: 'futura';
+  width: 600px;
+}
+
+.testimonial-1 > .message > .star {
+  display: flex;
+  justify-content:end;
+}
+.testimonial-1 > .message >.text {
   font-size: larger;
 }
 

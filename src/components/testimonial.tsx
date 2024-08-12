@@ -26,7 +26,7 @@ const Testimonial = () => {
               </div>
 
               <div className='message'>
-                  <div className='star'>
+                  <div className='star' style={{display:"flex", gap:"10px",}}>
                  <img src={star} width={30} style={{ filter:"invert(74%) sepia(48%) saturate(843%) hue-rotate(360deg) brightness(103%) contrast(113%)"}} alt="" />
                  <img src={star} width={30} style={{ filter:"invert(74%) sepia(48%) saturate(843%) hue-rotate(360deg) brightness(103%) contrast(113%)"}} alt="" />
                  <img src={star} width={30} style={{ filter:"invert(74%) sepia(48%) saturate(843%) hue-rotate(360deg) brightness(103%) contrast(113%)"}} alt="" />
@@ -55,7 +55,7 @@ const Testimonial = () => {
                  <img src={star} width={30} style={{ filter:"invert(74%) sepia(48%) saturate(843%) hue-rotate(360deg) brightness(103%) contrast(113%)"}} alt="" />
                   </div>
                   <div className='text'>
-                  <p style={{textAlign:"right"}}>      
+                  <p className='text-sarah-on-shopee' style={{textAlign:"right"}}>      
                     <span><b>Sarah</b> on Shopee <img src={shopee} width={15} alt="" /></span>
                     <br />              
                     Varian sakura ini wangi banget dan bikin kulitku sehat. Kurapku hilang dan kulit jadi bersih. Nggak ada iritasi lagi, cocok buat kulit sensitif. Selain itu, bikin kulit jadi lebih cerah. Bakal pakai terus!             </p>
