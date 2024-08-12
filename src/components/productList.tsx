@@ -115,7 +115,7 @@ const ProductList = () => {
           >     
             <figure>
               <center>
-                <img src={lavenderLg} style={{transform:"scale(0.9)"}} alt="lavender-large" />
+                <img src={lavenderLg} className='lavender-large-product'  alt="lavender-large" />
               </center>
               <figcaption
               style={{

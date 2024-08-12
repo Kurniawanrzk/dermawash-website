@@ -499,11 +499,18 @@ font-size: 30px;
   letter-spacing: 3px;
   font-size: 30px;
 } 
+
+.lavender-large-product {
+  transform: scale(0.9) !important;
+}
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .social-media {
     margin-top: 40px;
   }
+  .lavender-large-product {
+      transform: scale(1.2) !important;
+      }
   
   .header-footer {
     color: white;
